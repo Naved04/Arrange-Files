@@ -9,7 +9,7 @@ for (const item of files) {
     let items = item.split(".")
     let ext = items[item.split(".").length - 1]
 
-    if (ext != "js" && ext != "json" && items.length > 1) {
+    if (ext != "js" && ext != "json" && ext != "git" && items.length > 1) {
         if (fsn.existsSync(path.join(basepath, ext))) {
             fs.rename(item, path.join(basepath, ext, item))
         }
